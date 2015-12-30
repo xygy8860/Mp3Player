@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icon_t"
+        android:layout_margin="7dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mp3"
+         />
+
+    <LinearLayout
+        android:id="@+id/click_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_height="30dp"
+            android:layout_width="22dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_clear"
+            />
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/click_button"
+        android:layout_toRightOf="@id/icon_t"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_up"
+            style="@style/NotificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="18sp"
+            android:text="回家的路" />
+
+        <TextView
+            android:id="@+id/tv_down"
+            style="@style/NotificationContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_up"
+            android:layout_alignParentLeft="true"
+            android:textSize="14sp"
+            android:text="刘德华" />
+    </RelativeLayout>
+
+</RelativeLayout>

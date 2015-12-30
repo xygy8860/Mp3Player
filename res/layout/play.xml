@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="8dp"
+    tools:context="com.example.mp3player.MainActivity" >
+    
+    	<ImageButton 
+    	    android:id="@+id/songerImage"
+    	    android:layout_height="40dp"
+    	    android:layout_width="40dp"
+    	    android:layout_alignParentLeft="true"
+    	    android:background="@drawable/liudehua"
+    	    android:layout_centerVertical="true"
+    	    android:scaleType="fitXY"
+        />
+
+    	
+       <TextView
+            android:id="@+id/album_title"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	
+        	android:layout_below="@id/songerImage"
+        	 />
+       
+        <TextView
+            android:id="@+id/song_id"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	android:layout_below="@id/songerImage"
+        	 />  
+        	  
+         <TextView
+            android:id="@+id/lrclink"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	android:layout_below="@id/songerImage"
+        	 /> 
+        <ImageButton 
+            android:id="@+id/downloadImage"
+    	    android:layout_height="25dp"
+    	    android:layout_width="25dp"
+    	    android:layout_alignParentRight="true"
+    	    android:background="@drawable/download1"
+    	    android:layout_centerVertical="true"
+    	    android:layout_alignTop="@id/songerImage"
+            />  
+            
+        <TextView 
+            android:id="@+id/temp"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/downloadImage"
+            />
+            
+        <ImageButton 
+            android:id="@+id/hearImage"
+    	    android:layout_height="25dp"
+    	    android:layout_width="25dp"
+    	    android:layout_toLeftOf="@id/temp"
+    	    android:background="@drawable/shiting"
+    	    android:layout_centerVertical="true"
+    	    android:layout_alignTop="@id/songerImage"
+            />   
+
+        <TextView
+            android:id="@+id/title"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:singleLine="true"
+        	android:layout_toRightOf="@id/songerImage"
+        	android:layout_toLeftOf="@id/hearImage"
+        	android:layout_alignTop="@id/songerImage"
+        	android:paddingTop="5dp"
+        	android:paddingLeft="@dimen/activity_horizontal_margin"
+    		android:paddingRight="@dimen/activity_horizontal_margin"
+    		android:text="adasd"
+        	 />
+      
+        <TextView
+            android:id="@+id/author"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_toRightOf="@id/songerImage"
+        	android:layout_below="@id/title"
+        	android:layout_toLeftOf="@id/hearImage"
+        	android:layout_alignBottom="@id/songerImage"
+        	android:singleLine="true"
+        	android:paddingLeft="@dimen/activity_horizontal_margin"
+    		android:paddingRight="@dimen/activity_horizontal_margin"
+    		android:textSize="10sp"
+    		android:textColor="#F5F5F5"
+    		android:text="adasd"
+        	 />
+        
+</RelativeLayout>
+

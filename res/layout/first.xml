@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    tools:context="com.example.notepad.MainActivity" >
+
+    <TextView 
+        android:id="@+id/scan_textView_scan"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="扫描歌曲"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:textColor="#FFFFFF"
+        />
+    
+    <View 
+   		android:layout_width="match_parent"  
+    	android:layout_height="2dp" 
+   		android:background="?android:attr/listDivider" 
+   		/>  
+        
+      <ProgressBar 
+          
+	    android:id="@+id/sacn_progress"
+        android:layout_width="300dp"
+        android:layout_height="5dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="64dp"
+        android:max="100"
+    	android:paddingRight="64dp"
+	    />
+      
+       <TextView 
+        android:id="@+id/scan_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="还没有本地音乐哦~~"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+    	android:paddingTop="10dp"
+    	android:textColor="#FFFFFF"
+        />
+       
+       <Button
+        android:id="@+id/scan_button"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:onClick="onClickButton"
+        android:text="扫描"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/buttonStyle"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+         />
+</LinearLayout>

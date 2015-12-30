@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mp3player"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="20" />
+
+    <application
+        android:name="com.example.mp3player.LrcActivity"
+        android:allowBackup="true"
+        android:icon="@drawable/mp3"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+        >
+        <!-- android:taskAffinity="com.example.mp3player" -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".NetworkSongsActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
+        
+         <activity
+            android:name=".SongInfoActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
+        
+         <activity
+            android:theme="@style/FullHeightDialog"
+            android:name=".ScanMusicActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
+
+        <activity
+            android:name=".NowContent"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        
+        <service android:name=".service.DownloadService"></service>
+        <service android:name=".service.PlayerService"></service>
+        <service android:name=".service.DownloadPic"></service>
+        
+    </application>
+    
+    
+    <!-- 悬浮框 -->
+    <uses-permission android:name ="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    
+    <!-- 网络 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+	<!-- SD卡写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- SD卡读权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 文件读写操作 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    
+    <!-- 读取电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    
+    <!-- 改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 改变wifi状态 -->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+	
+	<protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+	<uses-permission android:name="android.permission.REORDER_TASKS"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+    
+</manifest>

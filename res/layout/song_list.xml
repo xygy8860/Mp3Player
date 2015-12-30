@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:paddingLeft="15dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    tools:context="com.example.mp3player.MainActivity" >
+
+    <!-- 禁止获取焦点，以防截止onclick监听事件
+    android:focusable=”false”
+	android:focusableInTouchMode=”false” -->
+
+       <TextView
+            android:id="@+id/sizeList"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	android:textIsSelectable="false"
+        	 />
+       
+        <TextView
+            android:id="@+id/LrcName"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	android:textIsSelectable="false"
+        	 />  
+        	  
+         <TextView
+            android:id="@+id/Lrcsize"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:visibility="gone"
+        	android:textIsSelectable="false"
+        	 />
+
+         <ImageView
+             android:layout_width="16dp"
+             android:layout_height="16dp"
+             android:background="@drawable/song_down1" />    
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/songInfoList"
+        	android:layout_width="wrap_content"
+        	android:layout_gravity="left"
+        	android:singleLine="true"
+        	android:layout_height="wrap_content"
+        	android:textIsSelectable="false"
+        	android:text="潇洒走一回"
+        	 />
+      
+        <TextView
+            android:id="@+id/songer"
+        	android:layout_width="match_parent"
+        	android:layout_gravity="right"
+        	android:gravity="right"
+        	android:singleLine="true"
+        	android:layout_height="wrap_content"
+        	android:textIsSelectable="false"
+        	 />
+        
+</LinearLayout>
+

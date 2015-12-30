@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">520Music</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">扫描本地音乐</string>
+    <string name="update">更新列表</string>
+    <string name="songInfo">歌曲名称</string>
+    <string name="songer">演唱者</string>
+    <string name="size">文件大小</string>
+    <string name="newList">歌曲列表</string>
+    <string name="downloadList">下载列表</string>
+    <string name="nextButton">下一曲</string>
+    <string name="StartAndStopButton">开始</string>
+    <string name="startSongInfo">欢迎使用MP3播放器</string>
+    <string name="tab_1">我的音乐</string>
+    <string name="tab_2">网络榜单</string>
+    <string name="tab_3">搜索</string>
+    
+    <string name="songinfo_tab_1">歌手信息</string>
+    <string name="songinfo_tab_2">歌曲信息</string>
+    <string name="songinfo_tab_3">歌词信息</string>
+    
+    <string name="exit">退出</string>
+    
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+</resources>

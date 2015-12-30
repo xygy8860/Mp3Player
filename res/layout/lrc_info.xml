@@ -1,0 +1,88 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp"
+android:id="@+id/lrc_infon"
+tools:context=".MainActivity" >
+
+ <LinearLayout
+     android:id="@+id/lrc_info_ll"
+	android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:orientation="vertical"    
+    >
+     
+         <TextView
+        android:id="@+id/lrc_info_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" 
+        android:paddingTop="100dp"
+        android:textColor="#FFFFFF"  
+        android:gravity="center_horizontal"
+
+        
+        />
+    
+         
+		    <TextView
+		        android:id="@+id/lrc_info_2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="20sp"
+		        android:textColor="#FFFF00"  
+		        android:gravity="center_horizontal"
+		        />
+
+
+    <TextView
+        android:id="@+id/lrc_info_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="16sp" 
+        android:textColor="#FFFFFF" 
+        android:paddingBottom="100dp" 
+         />
+    
+    <RelativeLayout
+	    android:id="@+id/lrcTime"
+	    android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_alignParentBottom="true"
+	    >
+	    
+	    <TextView
+        android:id="@+id/lrc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="18sp" 
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+      	android:textColor="#FFFFFF"
+        android:text="歌词时间补偿"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        />
+	    
+	    <ImageButton 
+	    android:id="@+id/lrc_add_time"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/lrc_time"
+        android:background="@drawable/song_down"
+	        />
+	    <ImageButton 
+	    android:id="@+id/lrc_jian_time"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/lrc_time"
+        android:background="@drawable/time_jian"
+	        />
+	    
+	    </RelativeLayout>
+    
+    </LinearLayout> 
+
+</ScrollView>

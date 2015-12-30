@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/xuhua4"
+    >
+    
+   <RelativeLayout 
+    android:id="@+id/playLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+     >
+    <!--     android:background="#FFFFFF" -->
+	<View  
+	    android:id="@+id/viewDivider1"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1px" 
+   		android:background="?android:attr/listDivider"
+   		android:paddingTop="10dp"     	
+	/>  
+	<TextView
+	    android:id="@+id/viewDivider"
+	    android:layout_height="10dp"
+	    android:layout_width="match_parent"
+	    android:visibility="invisible"
+	    android:layout_below="@id/viewDivider1"
+	    />
+    
+    <ImageButton 
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_next"
+        android:layout_below="@id/viewDivider"
+        android:layout_alignParentRight="true"
+        android:background="#FFFFFF"
+        android:paddingTop="6dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        />
+    
+    <ImageButton 
+        android:id="@+id/StartAndStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_play"
+        android:background="#FFFFFF"
+        
+        android:layout_below="@id/viewDivider"
+        android:layout_toLeftOf="@id/nextButton"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        />
+    
+      <ImageButton 
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_stop"
+        android:background="#FFFFFF"
+        android:layout_below="@id/viewDivider"
+        android:layout_alignBottom="@id/StartAndStopButton"
+        android:layout_toLeftOf="@id/StartAndStopButton"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        />
+    
+    <!-- TextView 实现跑马灯效果
+    
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+    
+     -->
+     
+     <ImageButton 
+        android:id="@+id/songerImagePlay"
+        android:layout_width="34dp"
+        android:layout_height="42dp"
+        android:background="@drawable/author"
+        android:layout_below="@id/viewDivider"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@id/StartAndStopButton"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        />
+    
+      <com.example.mp3player.AlwaysMarqueeTextView
+        android:id="@+id/songList"
+        
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="false"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewDivider"
+        android:text="欢迎使用MP3播放器                                "
+        android:textColor="#339933"
+        android:layout_toRightOf="@id/songerImagePlay"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@id/StartAndStopButton"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="45dp"
+        />
+       <!-- android:layout_alignParentRight="true" 与父容器右侧对侧-->
+
+	</RelativeLayout>
+	
+   
+	
+   	<RelativeLayout
+	    android:id="@+id/TextviewLrc"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:layout_above="@id/playLayout"
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:paddingLeft="10dp"
+	    >
+     <ImageButton 
+        android:id="@+id/playMode"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_list_play"
+        android:layout_alignParentLeft="true"
+        
+        android:layout_centerVertical="true"
+        />
+   	    
+   	    
+   	<TextView 
+   	    android:id="@+id/time"
+   	    android:layout_height="wrap_content"
+   	    android:layout_width="50dp"
+   	    android:layout_toRightOf="@id/playMode"
+   	    android:text="0:00"
+   	    android:layout_centerVertical="true"  
+   	    android:paddingLeft="8dp"
+   	    />
+   	<TextView 
+   	    android:id="@+id/timeAll"
+   	    android:layout_height="wrap_content"
+   	    android:layout_width="50dp"
+   	    android:text="0:00"
+   	    android:layout_centerVertical="true"
+   	    android:layout_alignParentRight="true"
+   	    />
+   	
+   	<SeekBar 
+   	    android:id="@+id/seekbar"
+   	    android:layout_height="wrap_content"
+   	    android:layout_width="250dp"
+   	    android:layout_centerVertical="true"
+   	    android:layout_toLeftOf="@id/timeAll"
+   	    android:layout_toRightOf="@id/time"
+   	    />
+   	
+   	</RelativeLayout>
+	
+   	<View  
+	    android:id="@+id/viewDivider2"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1px" 
+   		android:background="?android:attr/listDivider"
+   		android:layout_above="@id/TextviewLrc"    	
+	/>  
+   	
+    <android.support.v4.view.ViewPager  
+        android:id="@+id/pager"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:layout_above="@id/viewDivider2"
+        android:layout_alignParentTop="true" >  
+    </android.support.v4.view.ViewPager>  
+   
+    <!--  
+	<android.support.v4.app.FragmentTabHost
+	
+	android:id="@+id/tabhost" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_alignParentTop="true"
+	>
+	
+	<LinearLayout 
+	    android:id="@+id/linearLayout"
+	    android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:padding="5dp">
+		
+		<TabWidget 
+		    android:id="@android:id/tabs"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" />
+		<FrameLayout  
+                android:id="@android:id/tabcontent"  
+                android:layout_width="match_parent"  
+                android:layout_height="0dp"  
+                />  
+		
+		<FrameLayout 
+		    android:id="@+id/realtabcontent"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:padding="5dp" >  
+		</FrameLayout>	
+	</LinearLayout>
+	</android.support.v4.app.FragmentTabHost> 
+  -->
+  <ImageView 
+      android:id="@+id/mainImageBackground"
+      android:src="@drawable/back_1"
+      android:layout_height="1500px"
+      android:layout_width="1500px"
+      android:visibility="invisible"
+      >
+   	</ImageView>
+  
+</RelativeLayout>
+

@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.notepad.MainActivity" >
+
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+        >
+    <RelativeLayout 
+    android:id="@+id/songer_info_image"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@drawable/round_back"
+     android:layout_alignParentLeft="true"
+        >
+        
+	    <ImageView
+	        android:id="@+id/songer_info_image_songer"
+	        android:layout_height="113dp"
+	        android:layout_width="113dp"
+	        android:scaleType="fitXY" 
+	        android:layout_centerInParent="true"
+	        android:background="@drawable/s19_502"
+	        />
+	    
+	    </RelativeLayout>
+
+	    <RelativeLayout 
+	        android:id="@+id/songer_info_ll1"
+	        android:layout_height="50dp"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_alignTop="@id/songer_info_image"
+	        android:layout_toRightOf="@id/songer_info_image"
+	        android:layout_alignParentRight="true"
+	        >
+	    
+	    <TextView 
+	        android:id="@+id/songer_info_songer_name"
+	        android:layout_height="50dp"
+	        android:layout_width="wrap_content"
+	        android:text="歌手名称"
+	        android:gravity="center_vertical"
+	        android:textSize="16sp"
+	        android:textColor="#DDDDDD"
+	        />
+	    
+	     <TextView 
+	        android:layout_height="50dp"
+	        android:layout_width="20dp"
+	        android:paddingRight="20dp"
+	        android:text=">"
+	        android:gravity="center_vertical|right"
+	        android:layout_gravity="right"
+	        android:textSize="22sp"
+	        android:layout_toRightOf="@id/songer_info_songer_name"
+	        android:layout_alignParentRight="true"
+	        android:textColor="#DDDDDD"
+	        
+	        />
+	    
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/songer_info_ll2"
+	        android:layout_height="50dp"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_alignBottom="@id/songer_info_image"
+	        android:layout_toRightOf="@id/songer_info_image"
+	        >
+	    
+	    <TextView 
+	        android:id="@+id/songer_info_county"
+	        android:layout_height="50dp"
+	        android:layout_width="wrap_content"
+	        android:text="歌手区域"
+	        android:gravity="center_vertical"
+	        android:textSize="16sp"
+	        android:textColor="#DDDDDD"
+	        />
+	    
+	     <TextView 
+	        android:layout_height="50dp"
+	        android:layout_width="wrap_content"
+	        android:text=">"
+	        android:gravity="center_vertical|right"
+	        android:layout_gravity="right"
+	        android:layout_toRightOf="@id/songer_info_county"
+	        android:layout_alignParentRight="true"
+	        android:paddingRight="20dp"
+	        android:textSize="22sp"
+	        android:textColor="#DDDDDD"
+	        />
+	    
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/songer_info_ll3"
+	        android:layout_height="50dp"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_above="@id/songer_info_ll2"
+	        android:layout_below="@id/songer_info_ll1"
+	        android:layout_toRightOf="@id/songer_info_image"
+	        >
+	    
+	    <TextView 
+	        android:id="@+id/songer_info_song_name"
+	        android:layout_height="50dp"
+	        android:layout_width="wrap_content"
+	        android:text="歌曲名称"
+	        android:paddingLeft="20dp"
+	        android:gravity="center_vertical"
+	        android:textSize="16sp"
+	        android:textColor="#DDDDDD"
+	        />
+	    
+	     <TextView 
+	        android:layout_height="50dp"
+	        android:layout_width="wrap_content"
+	        android:text=">"
+	        android:gravity="center_vertical|right"
+	        android:layout_gravity="right"
+	        android:layout_toRightOf="@id/songer_info_song_name"
+	        android:layout_alignParentRight="true"
+	        android:paddingRight="20dp"
+	        android:textSize="22sp"
+	        android:textColor="#DDDDDD"
+	        />
+	    
+	    </RelativeLayout>
+
+	</RelativeLayout>
+	
+    
+    <TextView 
+        android:id="@+id/songer_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:scrollbars="vertical"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#F5F5FF"
+        android:text=""
+	 />
+
+</LinearLayout>

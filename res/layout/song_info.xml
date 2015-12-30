@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/sencondView"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"     
+    tools:context="com.example.notepad.MainActivity" >
+
+    
+    <RelativeLayout 
+        android:id="@+id/song_layout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"   
+        android:layout_alignParentBottom="true" 
+        android:paddingTop="15dp"  
+        >
+     
+        <ImageButton 
+            android:id="@+id/song_download"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/song_down"
+            />
+
+        <ImageButton 
+            android:id="@+id/song_hear"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/song_hear"
+            android:layout_alignBottom="@id/song_download"
+            />
+        
+          <TextView 
+            android:id="@+id/songer_name"
+            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:layout_alignBottom="@id/song_download"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@id/song_download"
+            android:layout_toLeftOf="@id/song_hear"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            />
+        <TextView 
+            android:id="@+id/song_name"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@id/song_download"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@id/song_download"
+            android:layout_toLeftOf="@id/song_hear"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            />
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/scan_textView_Image_1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_above="@id/song_layout"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="16dp"
+        />
+    
+</RelativeLayout>
